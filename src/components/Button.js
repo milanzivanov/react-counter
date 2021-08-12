@@ -1,5 +1,8 @@
-const Button = (props) => {
-    return <button>+{props.increment}</button>;
+const Button = ({ increment, onClickFunction }) => {
+    const handleClick = () => {
+      onClickFunction(increment);
+    }
+    return <button onClick={handleClick}>+{increment}</button>
 }
 
 export default Button;
